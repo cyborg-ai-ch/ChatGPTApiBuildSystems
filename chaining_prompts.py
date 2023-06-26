@@ -545,6 +545,6 @@ Make sure to ask the user relevant follow up questions.
 #  {product_information_for_user_message_1}"""},
 # ]
 
-# final_response = get_completion_from_messages(messages)
-# print("final_response ---------------------------------")
-# print(final_response)
+final_response = get_completion_from_messages(messages)
+print("final_response ---------------------------------")
+print(final_response)

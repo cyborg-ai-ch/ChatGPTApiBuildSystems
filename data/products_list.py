@@ -335,3 +335,46 @@ products = {
         "price": 69.99
     }
 }
+
+categeroy_string = """
+computers and Laptops category:
+TechPro Ultrabook
+BlueWave Gaming Laptop
+PowerLite Convertible
+TechPro Desktop
+BlueWave Chromebook
+
+Smartphones and Accessories category:
+SmartX ProPhone
+MobiTech PowerCase
+SmartX MiniPhone
+MobiTech Wireless Charger
+SmartX EarBuds
+
+Televisions and Home Theater Systems category:
+CineView 4K TV
+SoundMax Home Theater
+CineView 8K TV
+SoundMax Soundbar
+CineView OLED TV
+
+Gaming Consoles and Accessories category:
+GameSphere X
+ProGamer Controller
+GameSphere Y
+ProGamer Racing Wheel
+GameSphere VR Headset
+
+Audio Equipment category:
+AudioPhonic Noise-Canceling Headphones
+WaveSound Bluetooth Speaker
+AudioPhonic True Wireless Earbuds
+WaveSound Soundbar
+AudioPhonic Turntable
+
+Cameras and Camcorders category:
+FotoSnap DSLR Camera
+ActionCam 4K
+FotoSnap Mirrorless Camera
+ZoomMaster Camcorder
+FotoSnap Instant Camera"""
