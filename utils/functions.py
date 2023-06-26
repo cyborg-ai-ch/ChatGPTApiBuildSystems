@@ -1,7 +1,6 @@
 import openai
 import json
-#
-from data import products
+from data.products_list import products, categeroy_string
 
 
 def get_completion(prompt, model="gpt-3.5-turbo") -> str:
@@ -53,48 +52,8 @@ def get_products_and_category(user_input) -> list:
 
     Allowed products: 
 
-    Computers and Laptops category:
-    TechPro Ultrabook
-    BlueWave Gaming Laptop
-    PowerLite Convertible
-    TechPro Desktop
-    BlueWave Chromebook
-
-    Smartphones and Accessories category:
-    SmartX ProPhone
-    MobiTech PowerCase
-    SmartX MiniPhone
-    MobiTech Wireless Charger
-    SmartX EarBuds
-
-    Televisions and Home Theater Systems category:
-    CineView 4K TV
-    SoundMax Home Theater
-    CineView 8K TV
-    SoundMax Soundbar
-    CineView OLED TV
-
-    Gaming Consoles and Accessories category:
-    GameSphere X
-    ProGamer Controller
-    GameSphere Y
-    ProGamer Racing Wheel
-    GameSphere VR Headset
-
-    Audio Equipment category:
-    AudioPhonic Noise-Canceling Headphones
-    WaveSound Bluetooth Speaker
-    AudioPhonic True Wireless Earbuds
-    WaveSound Soundbar
-    AudioPhonic Turntable
-
-    Cameras and Camcorders category:
-    FotoSnap DSLR Camera
-    ActionCam 4K
-    FotoSnap Mirrorless Camera
-    ZoomMaster Camcorder
-    FotoSnap Instant Camera
-
+    {categeroy_string}
+    
     Only output the list of objects, with nothing else.
     """
 
@@ -167,5 +126,5 @@ def generate_output_string(data_list: json) -> str:
     return output_string
 
 
-def find_category_and_product_only(products_and_category):
-    return generate_output_string(read_string_to_list(products_and_category))
+def find_category_and_product_only(user_inout):
+    return get_products_and_category(user_inout)
