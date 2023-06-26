@@ -1,4 +1,5 @@
 import os
+
 import openai
 from dotenv import load_dotenv, find_dotenv
 
@@ -59,11 +60,11 @@ messages = [
 user_message = f"""\
 Tell me more about your flat screen tvs"""
 
-messages =  [
-{'role':'system',
- 'content': system_message},
-{'role':'user',
- 'content': f"{delimiter}{user_message}{delimiter}"},
+messages = [
+    {'role': 'system',
+     'content': system_message},
+    {'role': 'user',
+     'content': f"{delimiter}{user_message}{delimiter}"},
 ]
 response = get_completion_from_messages(messages)
 print(response)

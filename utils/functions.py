@@ -1,5 +1,7 @@
-import openai
 import json
+
+import openai
+
 from data.products_list import products, categeroy_string
 
 
@@ -128,3 +130,20 @@ def generate_output_string(data_list: json) -> str:
 
 def find_category_and_product_only(user_inout):
     return get_products_and_category(user_inout)
+
+
+def answer_user_msg(user_msg, product_info):
+    delimiter = "```"
+    # Step 4: Answer the user question
+    system_message = f"""
+    You are a customer service assistant for a large electronic store. \
+    Respond in a friendly and helpful tone, with concise answers. \
+    Make sure to ask the user relevant follow-up questions.
+    """
+    messages = [
+        {'role': 'system', 'content': system_message},
+        {'role': 'user', 'content': f"{delimiter}{user_msg}{delimiter}"},
+        {'role': 'assistant', 'content': f"Relevant product information:\n{product_info}"}
+    ]
+
+    return get_completion_from_messages(messages)

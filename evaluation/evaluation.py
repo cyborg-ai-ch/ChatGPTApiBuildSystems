@@ -1,10 +1,12 @@
 import os
-import openai
 import sys
+
+import openai
 import panel as pn  # GUI
+from dotenv import load_dotenv, find_dotenv
+
 from utils.functions import find_category_and_product_only, read_string_to_list, generate_output_string, \
     get_completion_from_messages
-from dotenv import load_dotenv, find_dotenv
 
 pn.extension()
 sys.path.append('../..')

@@ -1,7 +1,8 @@
+import json
 import os
+
 import openai
 from dotenv import load_dotenv, find_dotenv
-import json
 
 from utils.functions import get_completion_from_messages
 
@@ -481,6 +482,7 @@ def read_string_to_list(input_string):
     except json.JSONDecodeError:
         print("Error: Invalid JSON string")
         return None
+
 
 print(category_and_product_response_1)
 category_and_product_list = read_string_to_list(category_and_product_response_1)

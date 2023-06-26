@@ -1,33 +1,14 @@
 # DeepLearning.AI
+
 ## Building Systems with the ChatGPT API
- https://learn.deeplearning.ai/chatgpt-building-system/
- 
-Greate Course by:Isa Fulford, Andrew Ng, and Laurence Moroney 
+
+https://learn.deeplearning.ai/chatgpt-building-system/
+
+Greate Course by:Isa Fulford, Andrew Ng, and Laurence Moroney
 
 Course structure:
 L2: classification (to categories and subcategories)
 L3: moderation api (stop prompt injection, test for validate non violated input)
-{
-  "flagged": false,
-  "categories": {
-    "sexual": false,
-    "hate": false,
-    "violence": false,
-    "self-harm": false,
-    "sexual/minors": false,
-    "hate/threatening": false,
-    "violence/graphic": false
-  },
-  "category_scores": {
-    "sexual": 2.1934844e-05,
-    "hate": 2.9083385e-06,
-    "violence": 0.098616496,
-    "self-harm": 2.9152812e-07,
-    "sexual/minors": 2.4384206e-05,
-    "hate/threatening": 2.8870053e-07,
-    "violence/graphic": 5.059437e-05
-  }
-}
 
 L4: Process Inputs: Chain of Thought Reasoning
 It is given a product list. The assistant is advised to evaluate the
@@ -40,9 +21,21 @@ In the third step give the assistance the list so the assistance can create a
 user answer from.
 
 L6: Check outputs
-This is a important task! 
+This is a important task!
 Use question, valid categories and assistance answer to the user to
 validate the answer of the user question
 
+L7: Evaluation
 Build an End-to-End System¶
 This puts together the chain of prompts that you saw throughout the course
+
+L8: Evaluation 1:
+Evaluation part I¶
+Evaluate LLM responses when there is a single "right answer"
+
+L9: Evaluation Part II
+Evaluate LLM responses where there isn't a single "right answer.
+
+Greate link:
+OpenAI evals:
+https://github.com/openai/evals/blob/main/evals/registry/modelgraded/fact.yaml
